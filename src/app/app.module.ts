@@ -11,7 +11,10 @@ import { HeroesModule } from './heroes/heroes.module';
 
 @NgModule({
   declarations: [AppComponent, CrisisListComponent, PageNotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HeroesModule],
+  imports: [BrowserModule, FormsModule, HeroesModule, AppRoutingModule],
+  //The order of route configuration is important because
+  // the router accepts the first route that matches a navigation request path.
+
   providers: [],
   bootstrap: [AppComponent],
 })
